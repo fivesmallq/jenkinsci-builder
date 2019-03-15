@@ -1,8 +1,19 @@
-FROM fivesmallq/builder-jdk
+FROM anapsix/alpine-java:8u202b08_jdk 
 
 LABEL maintainer.name="fivesmallq"
 LABEL maintainer.email="fivesmallq@gmail.com"
 
+RUN apk add --no-cache \
+    unzip \
+    wget \
+    curl \
+    zip \ 
+    python \
+    tzdata
+    
+# Timezone
+ENV TZ=Asia/Shanghai
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 RUN mkdir -p /app
 
 # ENV PLAY_VERSION __PLAY_VERSION__
@@ -21,8 +32,7 @@ RUN curl --location -s https://downloads.typesafe.com/play/${PLAY_VERSION}/play-
             /opt/play-${PLAY_VERSION}/samples \
             /opt/play-${PLAY_VERSION}/support
 
-RUN apk del --purge curl unzip \
-      && rm -fr /var/cache/apk/*
+RUN rm -fr /var/cache/apk/*
 
 ENV PATH /opt/play-${PLAY_VERSION}:$PATH
 
