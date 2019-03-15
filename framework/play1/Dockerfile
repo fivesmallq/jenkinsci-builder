@@ -9,7 +9,8 @@ RUN apk add --no-cache \
     curl \
     zip \ 
     python \
-    tzdata
+    tzdata \
+    openssh
     
 # Timezone
 ENV TZ=Asia/Shanghai
