@@ -8,4 +8,5 @@ RUN apk add --no-cache \
     wget \
     curl \
     zip \ 
-    tzdata
+    tzdata \
+    openssh
