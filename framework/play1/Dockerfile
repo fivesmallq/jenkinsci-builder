@@ -1,5 +1,8 @@
 FROM fivesmallq/builder-jdk
 
+LABEL maintainer.name="fivesmallq"
+LABEL maintainer.email="fivesmallq@gmail.com"
+
 RUN mkdir -p /app
 
 # ENV PLAY_VERSION __PLAY_VERSION__
