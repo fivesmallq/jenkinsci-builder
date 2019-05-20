@@ -21,7 +21,6 @@ fonts-sil-padauk \
 fonts-telu \
 fonts-thai-tlwg \
 ttf-liberation \
-ttf-unfonts-core \
 ttf-wqy-zenhei \
 locales \
 ca-certificates fonts-liberation libappindicator1 libnss3 lsb-release xdg-utils wget && \
