@@ -1,4 +1,4 @@
-FROM anapsix/alpine-java:8u202b08_jdk 
+FROM adoptopenjdk/openjdk8-openj9:alpine-slim
 
 LABEL maintainer.name="fivesmallq"
 LABEL maintainer.email="fivesmallq@gmail.com"
