@@ -1,4 +1,4 @@
-FROM adoptopenjdk/openjdk8-openj9:jdk8u212-b04_openj9-0.14.2
+FROM adoptopenjdk/openjdk8-openj9:alpine
 
 LABEL maintainer.name="fivesmallq"
 LABEL maintainer.email="fivesmallq@gmail.com"
